@@ -8,9 +8,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -115,6 +117,9 @@ public class Utils extends BasePage{
             e.printStackTrace();
         }
 
+    }
+    public static void assertCurrentURL(String url){
+        Assert.assertTrue(driver.getCurrentUrl().equals(url));
     }
 
 

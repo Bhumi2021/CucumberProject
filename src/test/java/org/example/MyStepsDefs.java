@@ -1,5 +1,7 @@
 package org.example;
 
+import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -19,6 +21,7 @@ public class MyStepsDefs {
     PaymentInformationPage paymentInformationPage=new PaymentInformationPage();
     ConfirmationOrderPage confirmationOrderPage=new ConfirmationOrderPage();
     CheckoutCompletedPage checkoutCompletedPage=new CheckoutCompletedPage();
+    LoginPage loginPage=new LoginPage();
 
 
     @Given("^user is on register page$")
@@ -126,7 +129,6 @@ public class MyStepsDefs {
         paymentMethodPage.clickOnCreditCard();
 
     }
-
     @When("^user enter all visa card details and click continue$")
     public void user_enter_all_visa_card_details_and_click_continue()  {
         paymentInformationPage.enterCardPaymentDetails();
@@ -140,5 +142,27 @@ public class MyStepsDefs {
     public void user_should_able_to_buy_book_product_successfully() {
         checkoutCompletedPage.verifyUserBuyProductSuccessfully();
     }
+    @When("^user click on login$")
+    public void userClickOnLogin() {
+        homePage.clickOnLogin();
+    }
+    @And("^user type invalid \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void userTypeInvalidAnd(String email, String password)  {
+        loginPage.typeEmailAndPassword(email, password);
+    }
+    @And("^user click on login button$")
+    public void userClickOnLoginButton() {
+        loginPage.clickOnLoginButton();
+    }
+    @Then("^user should not able to login successfully$")
+    public void userShouldNotAbleToLoginSuccessfully() {
+
+    }
+
+    @And("^user get \"([^\"]*)\"$")
+    public void userGet(String error_message)  {
+      loginPage.userShouldNotLoginSuccessfullyAndSeeErrorMessage(error_message);
+    }
+
 
 }

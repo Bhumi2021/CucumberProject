@@ -29,7 +29,7 @@ public class RegisterResultPage extends Utils {
 
     public void verifyRegisterMessage() {
         //Verifying expected result with actual result by using assert
-        Assert.assertEquals(getTextFromElement(_registerResult), "Your registration completed", "Your registration is not completed");
+        Assert.assertEquals(getTextFromElement(_registerResult), "Your registration complete", "Your registration is not completed");
         //Printing the comments
         System.out.println("Your registration completed");
 

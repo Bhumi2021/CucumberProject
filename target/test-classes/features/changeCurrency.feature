@@ -1,6 +1,6 @@
 @all
   Feature: Change currency
-    @test3
+    @currency
     Scenario: User should able to change currency for all products successfully
       Given user is on homepage
       When user select currency

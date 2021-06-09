@@ -21,9 +21,9 @@ public class RegisterPage extends Utils {
       //Applying timestamp
        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
     public void enterRegistrationDetails(){
-
+sleep(5000);
         //applying the wait
-       //waitForClickable(_newsletter,6000);
+       waitForClickable(_newsletter,6000);
        //click on gender
        clickOnElement(_gender);
        //type first name

@@ -18,6 +18,8 @@ public class HomePage extends Utils{
     private By _clickOnNewStore=By.xpath("//a[contains(@class,'news-title')]");
     private By _clickFacebookSymbol=By.xpath("//li[contains(@class,'facebook')]");
     private By _clickOnBook=By.xpath("//ul[contains(@class,'top-menu notmobile')]//a[contains(@href,'/books')]");
+    private By _clickOnLogin=By.xpath("//a[contains(@class,'ico-login')]");
+    //private By _clickOnLogin=By.cssSelector("a.ico.login");
 
 
 
@@ -82,5 +84,11 @@ public class HomePage extends Utils{
     public void clickOnBook(){
         //click on books category
         clickOnElement(_clickOnBook);
+    }
+    public void clickOnLogin(){
+        //click on login button
+       // waitForClickable(_clickOnLogin,1000);
+        clickOnElement(_clickOnLogin);
+
     }
 }
