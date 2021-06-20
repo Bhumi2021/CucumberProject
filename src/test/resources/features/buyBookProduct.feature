@@ -1,6 +1,6 @@
 @all
 Feature: Buy product successfully
-  @buyProduct
+  @buyProduct @reg
   Scenario: Register user should able to buy books product successfully
     Given user is on register page
     When user enters all required registration details

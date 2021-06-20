@@ -1,6 +1,6 @@
 @all
   Feature: Add new comment
-    @comment
+    @comment @reg
     Scenario: User should able to add new comment successfully
       Given user is on homepage
       When user click on New online store is open

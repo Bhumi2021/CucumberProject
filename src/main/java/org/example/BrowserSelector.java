@@ -13,12 +13,13 @@ import java.util.concurrent.TimeUnit;
 
 public class BrowserSelector extends BasePage {
     LoadProperty loadProperty=new LoadProperty();
-    String browserName=loadProperty.getProperty("browser");
+    //String browserName=loadProperty.getProperty("browser");
+    String browserName=System.getProperty("browser");
     public static final String AUTOMATE_USERNAME = "bhu_pmEYsi";
     public static final String AUTOMATE_ACCESS_KEY = "qHqsFKzcPppybDBnq6K9";
     public static final String URL = "https://" + AUTOMATE_USERNAME + ":" + AUTOMATE_ACCESS_KEY + "@hub-cloud.browserstack.com/wd/hub";
-    public static final boolean browserStack=false;
-
+    public static final boolean browserStack= Boolean.parseBoolean(System.getProperty("sauce"));
+   // public static final boolean browserStack=false;
     DesiredCapabilities caps = new DesiredCapabilities();
     public void openBrowser(){
         if (browserStack) {

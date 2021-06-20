@@ -1,9 +1,9 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/buyBookProduct.feature");
 formatter.feature({
   "line": 2,
-  "name": "User login successfully",
+  "name": "Buy product successfully",
   "description": "",
-  "id": "user-login-successfully",
+  "id": "buy-product-successfully",
   "keyword": "Feature",
   "tags": [
     {
@@ -12,609 +12,209 @@ formatter.feature({
     }
   ]
 });
-formatter.scenarioOutline({
+formatter.before({
+  "duration": 4240275200,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 4,
+  "name": "Register user should able to buy books product successfully",
+  "description": "",
+  "id": "buy-product-successfully;register-user-should-able-to-buy-books-product-successfully",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 3,
+      "name": "@buyProduct"
+    },
+    {
+      "line": 3,
+      "name": "@reg"
+    }
+  ]
+});
+formatter.step({
+  "line": 5,
+  "name": "user is on register page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "user enters all required registration details",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 7,
+  "name": "user click on register",
+  "keyword": "And "
+});
+formatter.step({
   "line": 8,
-  "name": "User should not able to login with invalid credential",
-  "description": "",
-  "id": "user-login-successfully;user-should-not-able-to-login-with-invalid-credential",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 7,
-      "name": "@login"
-    }
-  ]
+  "name": "user click on continue",
+  "keyword": "And "
 });
 formatter.step({
   "line": 9,
-  "name": "user click on login",
-  "keyword": "When "
+  "name": "user click on books",
+  "keyword": "And "
 });
 formatter.step({
   "line": 10,
-  "name": "user type invalid \"\u003cemail\u003e\" and \"\u003cpassword\u003e\"",
+  "name": "user select First Prize Pies book product",
   "keyword": "And "
 });
 formatter.step({
   "line": 11,
-  "name": "user click on login button",
+  "name": "user click on add to cart button",
   "keyword": "And "
 });
 formatter.step({
   "line": 12,
-  "name": "user should not able to login successfully",
-  "keyword": "Then "
+  "name": "user click on shopping cart",
+  "keyword": "And "
 });
 formatter.step({
   "line": 13,
-  "name": "user get \"\u003cerror_message\u003e\"",
+  "name": "user click on checkout",
   "keyword": "And "
 });
-formatter.examples({
+formatter.step({
   "line": 14,
-  "name": "",
-  "description": "",
-  "id": "user-login-successfully;user-should-not-able-to-login-with-invalid-credential;",
-  "rows": [
-    {
-      "cells": [
-        "email",
-        "password",
-        "error_message"
-      ],
-      "line": 15,
-      "id": "user-login-successfully;user-should-not-able-to-login-with-invalid-credential;;1"
-    },
-    {
-      "cells": [
-        "",
-        "",
-        "Please enter your email"
-      ],
-      "line": 16,
-      "id": "user-login-successfully;user-should-not-able-to-login-with-invalid-credential;;2"
-    },
-    {
-      "cells": [
-        "Name1@gmail.com",
-        "",
-        "Login was unsuccessful.Please correct the errors and try again.No customer account found"
-      ],
-      "line": 17,
-      "id": "user-login-successfully;user-should-not-able-to-login-with-invalid-credential;;3"
-    },
-    {
-      "cells": [
-        "",
-        "Abc123",
-        "Please enter your email"
-      ],
-      "line": 18,
-      "id": "user-login-successfully;user-should-not-able-to-login-with-invalid-credential;;4"
-    },
-    {
-      "cells": [
-        "Name1@gmail.com",
-        "Abc124",
-        "Login was unsuccessful.Please correct the error and try again.No customer account found"
-      ],
-      "line": 19,
-      "id": "user-login-successfully;user-should-not-able-to-login-with-invalid-credential;;5"
-    }
-  ],
-  "keyword": "Examples"
-});
-formatter.before({
-  "duration": 4457298500,
-  "status": "passed"
-});
-formatter.background({
-  "line": 4,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
+  "name": "User enter billing details and click continue",
+  "keyword": "And "
 });
 formatter.step({
-  "line": 5,
-  "name": "user is on homepage",
-  "keyword": "Given "
+  "line": 15,
+  "name": "User select shipping option and click continue",
+  "keyword": "And "
 });
-formatter.match({
-  "location": "MyStepsDefs.user_is_on_homepage()"
-});
-formatter.result({
-  "duration": 126632599,
-  "status": "passed"
-});
-formatter.scenario({
+formatter.step({
   "line": 16,
-  "name": "User should not able to login with invalid credential",
-  "description": "",
-  "id": "user-login-successfully;user-should-not-able-to-login-with-invalid-credential;;2",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 7,
-      "name": "@login"
-    },
-    {
-      "line": 1,
-      "name": "@all"
-    }
-  ]
-});
-formatter.step({
-  "line": 9,
-  "name": "user click on login",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 10,
-  "name": "user type invalid \"\" and \"\"",
-  "matchedColumns": [
-    0,
-    1
-  ],
+  "name": "User select credit card and click continue",
   "keyword": "And "
 });
 formatter.step({
-  "line": 11,
-  "name": "user click on login button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 12,
-  "name": "user should not able to login successfully",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 13,
-  "name": "user get \"Please enter your email\"",
-  "matchedColumns": [
-    2
-  ],
-  "keyword": "And "
-});
-formatter.match({
-  "location": "MyStepsDefs.userClickOnLogin()"
-});
-formatter.result({
-  "duration": 1185121300,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "",
-      "offset": 19
-    },
-    {
-      "val": "",
-      "offset": 26
-    }
-  ],
-  "location": "MyStepsDefs.userTypeInvalidAnd(String,String)"
-});
-formatter.result({
-  "duration": 136616100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "MyStepsDefs.userClickOnLoginButton()"
-});
-formatter.result({
-  "duration": 52386500,
-  "status": "passed"
-});
-formatter.match({
-  "location": "MyStepsDefs.userShouldNotAbleToLoginSuccessfully()"
-});
-formatter.result({
-  "duration": 21800,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Please enter your email",
-      "offset": 10
-    }
-  ],
-  "location": "MyStepsDefs.userGet(String)"
-});
-formatter.result({
-  "duration": 30002601,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 785605500,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 3022990900,
-  "status": "passed"
-});
-formatter.background({
-  "line": 4,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 5,
-  "name": "user is on homepage",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "MyStepsDefs.user_is_on_homepage()"
-});
-formatter.result({
-  "duration": 888300,
-  "status": "passed"
-});
-formatter.scenario({
   "line": 17,
-  "name": "User should not able to login with invalid credential",
-  "description": "",
-  "id": "user-login-successfully;user-should-not-able-to-login-with-invalid-credential;;3",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 7,
-      "name": "@login"
-    },
-    {
-      "line": 1,
-      "name": "@all"
-    }
-  ]
-});
-formatter.step({
-  "line": 9,
-  "name": "user click on login",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 10,
-  "name": "user type invalid \"Name1@gmail.com\" and \"\"",
-  "matchedColumns": [
-    0,
-    1
-  ],
+  "name": "user enter all visa card details and click continue",
   "keyword": "And "
 });
 formatter.step({
-  "line": 11,
-  "name": "user click on login button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 12,
-  "name": "user should not able to login successfully",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 13,
-  "name": "user get \"Login was unsuccessful.Please correct the errors and try again.No customer account found\"",
-  "matchedColumns": [
-    2
-  ],
-  "keyword": "And "
-});
-formatter.match({
-  "location": "MyStepsDefs.userClickOnLogin()"
-});
-formatter.result({
-  "duration": 1137221700,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Name1@gmail.com",
-      "offset": 19
-    },
-    {
-      "val": "",
-      "offset": 41
-    }
-  ],
-  "location": "MyStepsDefs.userTypeInvalidAnd(String,String)"
-});
-formatter.result({
-  "duration": 120583400,
-  "status": "passed"
-});
-formatter.match({
-  "location": "MyStepsDefs.userClickOnLoginButton()"
-});
-formatter.result({
-  "duration": 54157100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "MyStepsDefs.userShouldNotAbleToLoginSuccessfully()"
-});
-formatter.result({
-  "duration": 16300,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Login was unsuccessful.Please correct the errors and try again.No customer account found",
-      "offset": 10
-    }
-  ],
-  "location": "MyStepsDefs.userGet(String)"
-});
-formatter.result({
-  "duration": 32899500,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 1247767899,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 3152094100,
-  "status": "passed"
-});
-formatter.background({
-  "line": 4,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 5,
-  "name": "user is on homepage",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "MyStepsDefs.user_is_on_homepage()"
-});
-formatter.result({
-  "duration": 1218500,
-  "status": "passed"
-});
-formatter.scenario({
   "line": 18,
-  "name": "User should not able to login with invalid credential",
-  "description": "",
-  "id": "user-login-successfully;user-should-not-able-to-login-with-invalid-credential;;4",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 7,
-      "name": "@login"
-    },
-    {
-      "line": 1,
-      "name": "@all"
-    }
-  ]
-});
-formatter.step({
-  "line": 9,
-  "name": "user click on login",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 10,
-  "name": "user type invalid \"\" and \"Abc123\"",
-  "matchedColumns": [
-    0,
-    1
-  ],
+  "name": "User click on confirmation",
   "keyword": "And "
 });
 formatter.step({
-  "line": 11,
-  "name": "user click on login button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 12,
-  "name": "user should not able to login successfully",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 13,
-  "name": "user get \"Please enter your email\"",
-  "matchedColumns": [
-    2
-  ],
-  "keyword": "And "
-});
-formatter.match({
-  "location": "MyStepsDefs.userClickOnLogin()"
-});
-formatter.result({
-  "duration": 1131839500,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "",
-      "offset": 19
-    },
-    {
-      "val": "Abc123",
-      "offset": 26
-    }
-  ],
-  "location": "MyStepsDefs.userTypeInvalidAnd(String,String)"
-});
-formatter.result({
-  "duration": 131295200,
-  "status": "passed"
-});
-formatter.match({
-  "location": "MyStepsDefs.userClickOnLoginButton()"
-});
-formatter.result({
-  "duration": 50207801,
-  "status": "passed"
-});
-formatter.match({
-  "location": "MyStepsDefs.userShouldNotAbleToLoginSuccessfully()"
-});
-formatter.result({
-  "duration": 19201,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Please enter your email",
-      "offset": 10
-    }
-  ],
-  "location": "MyStepsDefs.userGet(String)"
-});
-formatter.result({
-  "duration": 43330801,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 1030980099,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 3179728200,
-  "status": "passed"
-});
-formatter.background({
-  "line": 4,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 5,
-  "name": "user is on homepage",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "MyStepsDefs.user_is_on_homepage()"
-});
-formatter.result({
-  "duration": 1173899,
-  "status": "passed"
-});
-formatter.scenario({
   "line": 19,
-  "name": "User should not able to login with invalid credential",
-  "description": "",
-  "id": "user-login-successfully;user-should-not-able-to-login-with-invalid-credential;;5",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 7,
-      "name": "@login"
-    },
-    {
-      "line": 1,
-      "name": "@all"
-    }
-  ]
-});
-formatter.step({
-  "line": 9,
-  "name": "user click on login",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 10,
-  "name": "user type invalid \"Name1@gmail.com\" and \"Abc124\"",
-  "matchedColumns": [
-    0,
-    1
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 11,
-  "name": "user click on login button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 12,
-  "name": "user should not able to login successfully",
+  "name": "user should able to buy book product successfully",
   "keyword": "Then "
 });
-formatter.step({
-  "line": 13,
-  "name": "user get \"Login was unsuccessful.Please correct the error and try again.No customer account found\"",
-  "matchedColumns": [
-    2
-  ],
-  "keyword": "And "
-});
 formatter.match({
-  "location": "MyStepsDefs.userClickOnLogin()"
+  "location": "MyStepsDefs.user_is_on_register_page()"
 });
 formatter.result({
-  "duration": 1131791499,
+  "duration": 790057100,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "Name1@gmail.com",
-      "offset": 19
-    },
-    {
-      "val": "Abc124",
-      "offset": 41
-    }
-  ],
-  "location": "MyStepsDefs.userTypeInvalidAnd(String,String)"
+  "location": "MyStepsDefs.user_enters_all_required_registration_details()"
 });
 formatter.result({
-  "duration": 125852100,
+  "duration": 6775160700,
   "status": "passed"
 });
 formatter.match({
-  "location": "MyStepsDefs.userClickOnLoginButton()"
+  "location": "MyStepsDefs.user_click_on_register()"
 });
 formatter.result({
-  "duration": 51040400,
+  "duration": 55600,
   "status": "passed"
 });
 formatter.match({
-  "location": "MyStepsDefs.userShouldNotAbleToLoginSuccessfully()"
+  "location": "MyStepsDefs.user_click_on_continue()"
 });
 formatter.result({
-  "duration": 15500,
+  "duration": 23300,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "Login was unsuccessful.Please correct the error and try again.No customer account found",
-      "offset": 10
-    }
-  ],
-  "location": "MyStepsDefs.userGet(String)"
+  "location": "MyStepsDefs.user_click_on_books()"
 });
 formatter.result({
-  "duration": 43973500,
+  "duration": 1166438400,
   "status": "passed"
 });
+formatter.match({
+  "location": "MyStepsDefs.user_select_First_Prize_Pies_book_product()"
+});
+formatter.result({
+  "duration": 1099987000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "MyStepsDefs.user_click_on_add_to_cart_button()"
+});
+formatter.result({
+  "duration": 1214715100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "MyStepsDefs.user_click_on_shopping_cart()"
+});
+formatter.result({
+  "duration": 24300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "MyStepsDefs.user_click_on_checkout()"
+});
+formatter.result({
+  "duration": 3145954700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "MyStepsDefs.user_enter_billing_details_and_click_continue()"
+});
+formatter.result({
+  "duration": 495894500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "MyStepsDefs.user_select_shipping_option_and_click_continue()"
+});
+formatter.result({
+  "duration": 10107668500,
+  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"input#shippingoption_1\"}\n  (Session info: chrome\u003d91.0.4472.106)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-FJ91MTP\u0027, ip: \u0027192.168.0.13\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_281\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.106, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\\Users\\User\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:60955}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 2545170b0aad6504a1d848d8aab6f986\n*** Element info: {Using\u003dcss selector, value\u003dinput#shippingoption_1}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)\r\n\tat org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat org.example.Utils.clickOnElement(Utils.java:33)\r\n\tat org.example.ShippingMethodPage.selectShippingOption(ShippingMethodPage.java:11)\r\n\tat org.example.MyStepsDefs.user_select_shipping_option_and_click_continue(MyStepsDefs.java:124)\r\n\tat ✽.And User select shipping option and click continue(src/test/resources/features/buyBookProduct.feature:15)\r\n",
+  "status": "failed"
+});
+formatter.match({
+  "location": "MyStepsDefs.user_select_credit_card_and_click_continue()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "location": "MyStepsDefs.user_enter_all_visa_card_details_and_click_continue()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "location": "MyStepsDefs.user_click_on_confirmation()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "location": "MyStepsDefs.user_should_able_to_buy_book_product_successfully()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.write("!!!!!......Scenario Failed....");
+formatter.embedding("image/png", "embedded0.png");
 formatter.after({
-  "duration": 1004323000,
+  "duration": 1094104400,
   "status": "passed"
 });
 });

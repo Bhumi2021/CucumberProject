@@ -4,7 +4,7 @@ Feature: User login successfully
   Background:
     Given user is on homepage
 
-  @login
+  @login @reg
   Scenario Outline: User should not able to login with invalid credential
     When user click on login
     And user type invalid "<email>" and "<password>"
